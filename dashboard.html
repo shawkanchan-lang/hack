@@ -1,0 +1,16 @@
+<h2>Book Train</h2>
+<form method="POST">
+<input type="text" name="train" placeholder="Train Name" required>
+<input type="number" name="seats" placeholder="Seats" required>
+<button type="submit">Book</button>
+</form>
+
+<h3>Your Bookings</h3>
+<ul>
+{% for b in bookings %}
+<li>{{b[2]}} - Seats: {{b[3]}}</li>
+{% endfor %}
+</ul>
+
+<a href="/logout">Logout</a>
+"""
